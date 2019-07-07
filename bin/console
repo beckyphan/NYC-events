@@ -4,3 +4,12 @@ require "bundler/setup"
 require "NYC/events"
 require "pry"
 Pry.start
+
+today = Sraper.new
+today.make_events
+
+# run CLI file 
+# display events happening today
+# user can view event to read event details
+# user can create a list to add event to a list
+# user can view lists and the collected events in each list

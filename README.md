@@ -2,10 +2,10 @@
 
 Welcome to New York!
 
-This gem scrapes the TIMEOUT New York website to give a quick list of events happening this week. The webpage is updated weekly, so running this gem will provide current events.
+This gem scrapes NYC.com to give a quick list of events happening today. The webpage is updated daily, so running this gem should always provide current events.
 
-It providers a command line interface for users to pull events happening this week.
 A list of events will be provided, in which users can select an event to learn more--including the event description, dates, etc.
+Users can also create lists and collect/add events to specific lists they have created for viewing later.
 
 ## Installation
 
