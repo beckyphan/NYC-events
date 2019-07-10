@@ -8,10 +8,13 @@ Pry.start
 today = Sraper.new
 today.make_events
 
-# run CLI file 
+# run CLI file
 # display events happening today
-# ready to run a 'display more'
-# user can view event to read event details
+# ready to run a 'display more' & scrape more
+# user can type exit to exit
+
+# MY NEXT STEPS
+# user can go one-level deep & select event to read event details
+
 # user can create a list to add event to a list
 # user can view lists and the collected events in each list
-# user can type exit to exit

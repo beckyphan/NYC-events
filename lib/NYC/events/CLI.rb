@@ -3,7 +3,8 @@ class CLI
     puts "\nTo view details of the event, select event number."
     puts "To view more events, type 'more'"
     puts "To create a list, type 'create list'"
-  end 
+    puts "Type 'exit' to exit program."
+  end
 
   def self.action(input)
     if input == 'more'
@@ -18,16 +19,16 @@ class CLI
       puts "Your list has been created! To add an event to your list, type 'your_listname.add(event_number)'"
     else
       puts "Your input was not recognized. Please try again."
-      input = gets.strip 
-    end 
-  end 
+      input = gets.strip
+    end
+  end
 
   puts "Welcome to NYC.\nIt's been waiting for you."
   puts "\nThese are the events happening today:"
 
   today = Scraper.new()
   today.make_events
-  Event.names 
+  Event.names
 
   CLI.user_prompt
   input = gets.strip
