@@ -1,21 +1,23 @@
 class CLI
+  def self.user_prompt
+    puts "\nTo view details of the event, select event number."
+    puts "To view more events, type 'more'"
+    puts "To create a list, type 'create list'"
+  end
+
   puts "Welcome to NYC.\nIt's been waiting for you."
-  puts "These are the events happening today:"
+  puts "\nThese are the events happening today:"
 
   today = Scraper.new()
 
   today.make_events
 
   Event.names
-
-  puts "To view details of the event, select event number."
-  puts "To view more events, type 'more'"
-  puts "To create a list, type 'create list'"
-
+  CLI.user_prompt
   input = gets.strip
 
   if input == 'more'
-    more
+    Scraper.more
   elsif input > 0
     index = input.to_i - 1
   elsif input == 'create list'

@@ -5,6 +5,7 @@ require 'open-uri'
 
 class Scraper
   attr_accessor :url
+  @@page = 1
 
   def initialize(url = "https://www.nyc.com/events/?int4=5")
     @url = url
@@ -29,10 +30,14 @@ class Scraper
     end
   end
 
+  def self.page
+    @@page
+  end
+
   def self.more
-    page = 1
-    page += 1
-    Scraper.new("https://www.nyc.com/events/?int4=5&p=" + "#{page}").make_events
+    @@page += 1
+    Scraper.new("https://www.nyc.com/events/?int4=5&p=" + "#{self.page}").make_events
+    Event.names
   end
 
 end
