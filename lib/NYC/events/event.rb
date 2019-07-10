@@ -20,7 +20,7 @@ class Event
 
   def self.more_names
     counter = 1
-    starter = (Scraper.page * 10) + ((Scraper.page - 2) * 10 + 1)
+    starter = Scraper.page * 20 - 19
     more_events = starter
 
     puts "\n"
