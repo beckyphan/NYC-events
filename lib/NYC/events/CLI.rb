@@ -29,9 +29,3 @@ class CLI
   end
 
 end
-
-def more
-  @page = 1
-  @page += 1
-  Scraper.new("https://www.nyc.com/events/?int4=5&p=" + "#{page}").make_events
-end
