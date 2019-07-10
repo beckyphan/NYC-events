@@ -18,7 +18,7 @@ class CLI
     more
   elsif input > 0
     index = input.to_i - 1
-  elsif 'create list'
+  elsif input == 'create list'
     print "Type in a list name:"
     listname = gets.strip
     List.new(listname)
@@ -26,7 +26,7 @@ class CLI
   else
     puts "Your input was not recognized. Please try again."
     input = gets.strip
-  end 
+  end
 
 end
 
