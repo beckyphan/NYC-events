@@ -18,6 +18,7 @@ class CLI
 
   if input == 'more'
     Scraper.more
+    CLI.user_prompt
   elsif input > 0
     index = input.to_i - 1
   elsif input == 'create list'
