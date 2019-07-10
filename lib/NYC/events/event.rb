@@ -23,4 +23,7 @@ class Event
     dates = self.all.collect {|event| event.date}
   end
 
+  def self.delete_all
+    @@all = []
+  end
 end
