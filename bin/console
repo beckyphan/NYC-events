@@ -12,9 +12,11 @@ today.make_events
 # display events happening today
 # ready to run a 'display more' & scrape more
 # user can type exit to exit
+# user can go one-level deep & select event to read event details
+# user can create a list to add event to a list
 
 # MY NEXT STEPS
-# user can go one-level deep & select event to read event details
-
-# user can create a list to add event to a list
 # user can view lists and the collected events in each list
+# user can review events in lists/list_options
+# update readme, confirm that it scrapes today's events vs tomorrow's events?
+# review all repository files -- are all files necessary?
