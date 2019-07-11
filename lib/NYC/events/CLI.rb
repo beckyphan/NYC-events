@@ -1,25 +1,40 @@
 class CLI
   def self.user_prompt
-    puts "\nTo view details of the event, select event number."
-    puts "To view more events, type 'more'"
-    puts "To create a list, type 'create list'"
-    puts "Type 'exit' to exit program."
+    if List.lists.count > 0
+      puts "\nTo view details of the event, select event number."
+      puts "To view more events, type 'more'"
+      puts "To view your lists or add events to your list, type 'list_options'"
+    else
+      puts "\nTo view details of the event, select event number."
+      puts "To view more events, type 'more'"
+      puts "To create a new list, type 'make_list'"
+    end
   end
 
   def self.action(input)
     if input == 'more'
       Scraper.more
       CLI.user_prompt
-    elsif input > 0
-      index = input.to_i - 1
-    elsif input == 'create list'
+    elsif input == 'make_list'
       print "Type in a list name:"
       listname = gets.strip
       List.new(listname)
-      puts "Your list has been created! To add an event to your list, type 'your_listname.add(event_number)'"
+      puts "\n----------"
+      puts "Your list: #{listname} has been created!\nTo add an event to your list, type '#{listname}.add(event_number)'"
+      puts "----------"
+      CLI.user_prompt
+    elsif input.to_i > 0
+      index = input.to_i - 1
+      Event.details(index)
+    elsif input == 'list_options'
+      puts "To add an event to your list(s), type:"
+      List.lists.each do |list|
+        puts "\t#{list.name}.add(event_number)"
+      end
+      puts "To view your collected events in a list, type in your listname followed by '.view'"
+      List.options
     else
-      puts "Your input was not recognized. Please try again."
-      input = gets.strip
+      "Your input was not recognized. Please try again."
     end
   end
 
@@ -30,6 +45,7 @@ class CLI
   today.make_events
   Event.names
 
+  puts "\nType 'exit' at anytime to quit program."
   CLI.user_prompt
   input = gets.strip
   while input != 'exit'

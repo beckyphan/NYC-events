@@ -25,7 +25,7 @@ class Scraper
       event.name = item.css("h3").text.strip
       event.date = item.css(".desktop-date").text.gsub("\n                    ", ' ').strip
       event.time = item.css(".datevenue strong.nyc-mobile-hidden").text
-      event.description = item.css("p[itemprop='description']").text.strip
+      event.description = item.css("p[itemprop='description']").text.gsub("read more", '').strip
       event.venue = item.css(".venuelink").text.gsub("read more", '').strip
     end
   end
@@ -37,7 +37,7 @@ class Scraper
   def self.more
     @@page += 1
     Scraper.new("https://www.nyc.com/events/?int4=5&p=" + "#{self.page}").make_events
-    Event.names
+    Event.more_names
   end
 
 end

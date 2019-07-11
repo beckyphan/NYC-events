@@ -32,12 +32,17 @@ class Event
     end
   end
 
+  def self.details(index)
+    event = @@all[index]
+    puts "\n----------"
+    puts "#{event.name}\n\t#{event.date} || #{event.time}\n\t@#{event.venue}"
+    puts "#{event.description}"
+    puts "----------"
+  end
+
   def self.dates
     counter = 1
     dates = self.all.collect {|event| event.date}
   end
 
-  def self.delete_all
-    @@all = []
-  end
 end
