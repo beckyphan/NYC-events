@@ -20,18 +20,13 @@ class CLI
       listname = gets.strip
       List.new(listname)
       puts "\n----------"
-      puts "Your list: #{listname} has been created!\nTo add an event to your list, type '#{listname}.add(event_number)'"
+      puts "Your list: #{listname} has been created!\nType 'list_options' at any time to add or view your lists."
       puts "----------"
       CLI.user_prompt
     elsif input.to_i > 0
       index = input.to_i - 1
       Event.details(index)
     elsif input == 'list_options'
-      puts "To add an event to your list(s), type:"
-      List.lists.each do |list|
-        puts "\t#{list.name}.add(event_number)"
-      end
-      puts "To view your collected events in a list, type in your listname followed by '.view'"
       List.options
     else
       "Your input was not recognized. Please try again."
