@@ -1,7 +1,4 @@
-require 'nokogiri'
-require 'open-uri'
-
-# require_all './events/'
+# require './events'
 
 class Scraper
   attr_accessor :url
