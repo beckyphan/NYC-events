@@ -42,13 +42,10 @@ class List
       CLI.user_prompt
     else
       list_index = list_input.to_i - 1
-      puts 'a'
-      self.lists[list_index].events do |event|
-        puts event.name
-        puts 'b'
-      end
+      puts "#{self.lists[list_index].name}:"
+      events_list = self.lists[list_index].view
+      CLI.user_prompt
     end
-    puts 'c'
   end
 
   def self.view
