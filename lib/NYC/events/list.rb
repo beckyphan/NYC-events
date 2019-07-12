@@ -40,12 +40,15 @@ class List
       self.lists[list_index].add(event_index)
       puts "#{Event.all[event_index].name} has been added to #{self.lists[list_index].name}!\n"
       CLI.user_prompt
-    elsif list_input.to_i <= List.lists.count
+    else
       list_index = list_input.to_i - 1
+      puts 'a'
       self.lists[list_index].events do |event|
         puts event.name
+        puts 'b'
       end
     end
+    puts 'c'
   end
 
   def self.view
