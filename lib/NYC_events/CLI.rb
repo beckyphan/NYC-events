@@ -1,4 +1,4 @@
-class NYCEvents::CLI
+class CLI
   def self.user_prompt
     if List.lists.count > 0
       puts "\nTo view details of the event, select event number."
@@ -36,7 +36,7 @@ class NYCEvents::CLI
   puts "Welcome to NYC.\nIt's been waiting for you."
   puts "\nThese are the events happening today:"
 
-  today = NYCEvents::Scraper.new()
+  today = Scraper.new()
   today.make_events
   Event.names
 

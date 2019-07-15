@@ -1,4 +1,4 @@
-class NYCEvents::Scraper
+class Scraper
   attr_accessor :url
   @@page = 1
 
