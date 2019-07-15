@@ -1,4 +1,5 @@
 class Scraper
+  attr_accessor :url
   @@page = 1
 
   def initialize(url = "https://www.nyc.com/events/?int4=5")
