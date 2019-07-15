@@ -1,5 +1,5 @@
 class Event
-  attr_accessor :name, :date, :day, :time, :venue, :description
+  attr_accessor :name, :date, :day, :time, :venue, :description, :link
   @@all = []
 
   def initialize

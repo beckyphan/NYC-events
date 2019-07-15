@@ -1,5 +1,4 @@
 class Scraper
-  attr_accessor :url
   @@page = 1
 
   def initialize(url = "https://www.nyc.com/events/?int4=5")
@@ -22,6 +21,7 @@ class Scraper
       event.time = item.css(".datevenue strong.nyc-mobile-hidden").text
       event.description = item.css("p[itemprop='description']").text.gsub("read more", '').strip
       event.venue = item.css(".venuelink").text.gsub("read more", '').strip
+      event.link = "https://www.nyc.com" + item.css("a.venuelink").attr("href").text
     end
   end
 
