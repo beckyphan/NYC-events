@@ -2,10 +2,14 @@ PATH
   remote: .
   specs:
     NYC_events (0.1.0)
+      nokogiri
 
 GEM
   remote: https://rubygems.org/
   specs:
+    mini_portile2 (2.4.0)
+    nokogiri (1.10.3)
+    mini_portile2 (~> 2.4.0)
     rake (10.5.0)
 
 PLATFORMS
