@@ -1,4 +1,4 @@
-class NYCEvents::CLI
+class CLI
   def self.user_prompt
     if List.lists.count > 0
       puts "\nTo view details of the event, select event number."
