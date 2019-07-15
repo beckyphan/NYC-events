@@ -1,5 +1,3 @@
-# require './events'
-
 class NYCEvents::Scraper
   attr_accessor :url
   @@page = 1

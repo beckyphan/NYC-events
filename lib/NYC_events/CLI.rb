@@ -36,7 +36,7 @@ class NYCEvents::CLI
   puts "Welcome to NYC.\nIt's been waiting for you."
   puts "\nThese are the events happening today:"
 
-  today = Scraper.new()
+  today = NYCEvents::Scraper.new()
   today.make_events
   Event.names
 
