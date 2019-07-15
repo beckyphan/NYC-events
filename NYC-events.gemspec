@@ -1,10 +1,10 @@
 
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "NYC/events/version"
+require "NYC_events/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "NYC-events"
+  spec.name          = "NYC_events"
   spec.version       = NYC::Events::VERSION
   spec.authors       = ["'Becky Phan'"]
   spec.email         = ["'beckyphan@live.com'"]

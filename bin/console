@@ -1,8 +1,7 @@
 #!/usr/bin/env ruby
 
 require "bundler/setup"
-require "NYC/events"
-require "NYC/events/scraper.rb"
+require "NYC_events"
 
 today = Scraper.new
 today.make_events
