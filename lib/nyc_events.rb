@@ -1,0 +1,5 @@
+require "NYC_events/version"
+require "NYC_events/scraper.rb"
+require "NYC_events/event.rb"
+require "NYC_events/list.rb"
+require "NYC_events/CLI.rb"
