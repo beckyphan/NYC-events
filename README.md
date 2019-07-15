@@ -25,7 +25,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Use this gem to scrape events from NYC.com & create/save lists of events happening in New York City.
 
 ## Development
 
