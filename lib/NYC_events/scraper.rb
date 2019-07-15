@@ -1,6 +1,6 @@
 # require './events'
 
-class Scraper
+class NYCEvents::Scraper
   attr_accessor :url
   @@page = 1
 
