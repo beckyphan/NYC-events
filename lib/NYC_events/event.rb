@@ -38,6 +38,7 @@ class Event
     puts "\n----------"
     puts "#{event.name}\n\t#{event.date} || #{event.time}\n\t@#{event.venue}"
     puts "#{event.description}"
+    puts "\nTo read more or purchase tickets, visit #{event.link}"
     puts "----------"
   end
 
