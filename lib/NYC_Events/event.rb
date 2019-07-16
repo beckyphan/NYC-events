@@ -21,7 +21,7 @@ class NYC_Events::Event
   def self.more_names
     counter = 1
     #scraper pulls in 20 items per page
-    starter = Scraper.page * 20 - 19 # formula to continue numbering
+    starter = NYC_Events::Scraper.page * 20 - 19 # formula to continue numbering
     more_events = starter
 
     puts "\n"

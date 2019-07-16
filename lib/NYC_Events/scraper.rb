@@ -16,7 +16,7 @@ class NYC_Events::Scraper
 
   def make_events
     self.get_events.each do |item|
-      event = Event.new
+      event = NYC_Events::Event.new
       event.name = item.css("h3").text.strip
       event.date = item.css(".desktop-date").text.gsub("\n                    ", ' ').strip
       event.time = item.css(".datevenue strong.nyc-mobile-hidden").text
@@ -32,8 +32,8 @@ class NYC_Events::Scraper
 
   def self.more
     @@page += 1
-    Scraper.new("https://www.nyc.com/events/?int4=5&p=" + "#{self.page}").make_events
-    Event.more_names
+    NYC_Events::Scraper.new("https://www.nyc.com/events/?int4=5&p=" + "#{self.page}").make_events
+    NYC_Events::Event.more_names
   end
 
 end
