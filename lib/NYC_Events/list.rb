@@ -38,7 +38,7 @@ class NYC_Events::List
       list_index = values[0].to_i - 1
       event_index = values[1].to_i - 1
       self.lists[list_index].add(event_index)
-      puts "#{Event.all[event_index].name} has been added to #{self.lists[list_index].name}!\n"
+      puts "#{NYC_Events::Event.all[event_index].name} has been added to #{self.lists[list_index].name}!\n"
       NYC_Events::CLI.user_prompt
     else
       list_index = list_input.to_i - 1
