@@ -1,4 +1,4 @@
-class NYC_Events::List
+class List
   attr_accessor :name, :events
   @@lists = []
 

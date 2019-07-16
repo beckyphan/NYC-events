@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 require "bundler/setup"
-# require "NYC-events"
+# require "NYC_Events"
 
 require "irb"
 IRB.start

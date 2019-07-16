@@ -1,4 +1,4 @@
-class NYC_Events::Event
+class Event
   attr_accessor :name, :date, :day, :time, :venue, :description, :link
   @@all = []
 
