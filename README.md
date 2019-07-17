@@ -1,4 +1,4 @@
-# NYC_Events
+# nyc_events
 
 Welcome to New York!
 
@@ -12,7 +12,7 @@ Users can also create lists and collect/add events to specific lists they have c
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'NYC_Events'
+gem 'nyc_events'
 ```
 
 And then execute:
@@ -21,7 +21,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install NYC_Events
+    $ gem install nyc_events
 
 ## Usage
 

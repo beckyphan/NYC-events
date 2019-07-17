@@ -1,5 +1,0 @@
-require_relative "NYC_Events/version"
-require_relative "NYC_Events/scraper.rb"
-require_relative "NYC_Events/event.rb"
-require_relative "NYC_Events/list.rb"
-require_relative "NYC_Events/CLI.rb"
