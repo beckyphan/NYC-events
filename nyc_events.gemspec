@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require "NYC_Events/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "NYC_events"
+  spec.name          = "nyc_events"
   spec.version       = NYC_Events::VERSION
   spec.authors       = ["'Becky Phan'"]
   spec.email         = ["'beckyphan@live.com'"]
