@@ -50,6 +50,7 @@ class NYC_Events::CLI
   puts "\nType 'exit' at anytime to quit program."
   NYC_Events::CLI.user_prompt
   input = gets.strip
+  
   while input != 'exit'
     NYC_Events::CLI.action(input)
     input = gets.strip
