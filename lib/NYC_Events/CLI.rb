@@ -1,4 +1,5 @@
 class NYC_Events::CLI
+
   def self.user_prompt
     if NYC_Events::List.lists.count > 0
       puts "\nTo view details of the event, select event number."
@@ -24,12 +25,18 @@ class NYC_Events::CLI
       puts "----------"
       NYC_Events::CLI.user_prompt
     elsif input.to_i > 0
-      index = input.to_i - 1
-      NYC_Events::Event.details(index)
+      if input.to_i <= NYC_Events::Event.all.count
+        index = input.to_i - 1
+        NYC_Events::Event.details(index)
+      else
+        puts "Did you want to see more events? If so, type 'more'"
+        input = gets.strip
+      end
     elsif input == 'list_options'
       NYC_Events::List.options
     else
       "Your input was not recognized. Please try again."
+      input = gets.strip
     end
   end
 
@@ -47,4 +54,5 @@ class NYC_Events::CLI
     NYC_Events::CLI.action(input)
     input = gets.strip
   end
+
 end
