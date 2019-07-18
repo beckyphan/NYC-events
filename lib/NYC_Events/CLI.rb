@@ -30,7 +30,6 @@ class NYC_Events::CLI
         NYC_Events::Event.details(index)
       else
         puts "Did you want to see more events? If so, type 'more'"
-        input = gets.strip
       end
     elsif input == 'list_options'
       NYC_Events::List.options
@@ -38,7 +37,6 @@ class NYC_Events::CLI
       return input = "exit"
     else
       puts "Your input was not recognized. Please try again."
-      input = gets.strip
     end
   end
 
