@@ -6,8 +6,8 @@ require "NYC_Events/version"
 Gem::Specification.new do |spec|
   spec.name          = "nyc_events"
   spec.version       = NYC_Events::VERSION
-  spec.authors       = ["'Becky Phan'"]
-  spec.email         = ["'beckyphan@live.com'"]
+  spec.authors       = ["Becky Phan"]
+  spec.email         = ["beckyphan@live.com"]
 
   spec.summary       = %q{This gem scrapes events happening today from NYC.com}
   # spec.homepage      = "TODO: Put your gem's website or public repo URL here."
