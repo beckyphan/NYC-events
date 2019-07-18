@@ -38,7 +38,7 @@ class NYC_Events::Event
     puts "\n----------"
     puts "#{event.name}\n\t#{event.date} || #{event.time}\n\t@#{event.venue}"
     puts "#{event.description}"
-    puts "\nTo read more or purchase tickets, visit #{event.link}"
+    (event.link == '') ? (puts "\nTo read more or purchase tickets, visit #{event.link}") : (puts "More info To Be Announced")
     puts "----------"
   end
 

@@ -22,7 +22,7 @@ class NYC_Events::Scraper
       event.time = item.css(".datevenue strong.nyc-mobile-hidden").text
       event.description = item.css("p[itemprop='description']").text.gsub("read more", '').strip
       event.venue = item.css("span[itemprop='name']").text
-      event.link = "https://www.nyc.com" + item.css("a.venuelink").attr("href").text
+      event.link = "https://www.nyc.com" + item.css("a.venuelink").attr("href").text if item.css("a.venuelink").attr("href")
     end
   end
 

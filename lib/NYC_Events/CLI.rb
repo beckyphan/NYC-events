@@ -34,8 +34,10 @@ class NYC_Events::CLI
       end
     elsif input == 'list_options'
       NYC_Events::List.options
+    elsif input == "exit"
+      return input = "exit"
     else
-      "Your input was not recognized. Please try again."
+      puts "Your input was not recognized. Please try again."
       input = gets.strip
     end
   end
@@ -50,7 +52,7 @@ class NYC_Events::CLI
   puts "\nType 'exit' at anytime to quit program."
   NYC_Events::CLI.user_prompt
   input = gets.strip
-  
+
   while input != 'exit'
     NYC_Events::CLI.action(input)
     input = gets.strip
