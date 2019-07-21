@@ -1,13 +1,12 @@
 class NYC_Events::CLI
 
   def self.user_prompt
+    puts "\nTo view details of the event, select event number."
+    puts "To view more events, type 'more'"
+
     if NYC_Events::List.lists.count > 0
-      puts "\nTo view details of the event, select event number."
-      puts "To view more events, type 'more'"
       puts "To view your lists or add events to your list, type 'list_options'"
     else
-      puts "\nTo view details of the event, select event number."
-      puts "To view more events, type 'more'"
       puts "To create a new list, type 'make_list'"
     end
   end
