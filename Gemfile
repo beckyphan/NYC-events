@@ -2,4 +2,4 @@ source "https://rubygems.org"
 
 gemspec
 require 'open-uri'
-require 'nokogiri'
+gem "nokogiri", ">= 1.10.4"
