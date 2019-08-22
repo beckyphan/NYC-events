@@ -16,7 +16,7 @@ PLATFORMS
 
 DEPENDENCIES
   bundler (~> 2.0)
-  nokogiri (~> 1.10)
+  nokogiri (>= 1.10.4)
   nyc_events!
   rake (~> 10.0)
 
